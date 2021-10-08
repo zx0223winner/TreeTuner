@@ -1,0 +1,33 @@
+### TreeTrimmer parameter input file
+
+### The cutoff value for de-replication
+# Specify a cutoff of support values (e.g. bootstrap values, posterior probability)
+# either in integer (0-100) or decimal (0.0-1.0).
+# Leave it blank or use default (0.0) for trees with no branch supports.
+
+cutoff=0.8
+
+### Query tag (optional: default is "query_tag=QUERY")
+# If a tree includes a 'query' OTU, which is used as a reference 
+# and is supposed to be retained after the de-replication process, 
+# a string in the OTU name can be specified as a tag to avoid removal 
+
+query_tag=Query
+
+### Delimiter for categories of the taxonomic information
+# (default: "taxon_delimiter=;\s" [semicolon plus single space])
+# Only use regular expression for a space character
+
+taxon_delimiter=;\s 
+
+### Which taxonomic categories should be pruned? How many OTUs should be retained?
+# The category information can be provided in Taxonomic_information_file,
+# otherwise OTU names are used as labels of taxonomic information.
+# example: Bacteria	2 (tab-delimited)
+
+Bacteria	2
+Eukaryota	2
+
+### How many OTUs should be retained in each supported branch of the tree unless specified above?
+
+num_retained=2

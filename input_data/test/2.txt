@@ -1,0 +1,23 @@
+AT1G11750.1	Pfam	PF00574	Clp protease	96	269	3.70E-65
+AT5G53350.1	Pfam	PF10431,PF07724	C-terminal, D2-small domain, of ClpB protein,AAA domain (Cdc48 subfamily)	433,222	507,426	3.50E-13,7.70E-44
+AT4G17040.1	Pfam	PF00574	Clp protease	105	286	1.60E-52
+AT5G15450.1	Pfam	PF10431,PF17871,PF02861,PF07724,PF00004	C-terminal, D2-small domain, of ClpB protein,AAA lid domain,"Clp amino terminal domain, pathogenicity island component",AAA domain (Cdc48 subfamily),ATPase family associated with various cellular activities (AAA)	850,418,170,676,279	928,520,221,843,411	2.50E-25,1.10E-33,4.80E-12,3.50E-55,1.00E-12
+AT5G51070.1	Pfam	PF07724,PF10431,PF02861,PF00004,PF17871	AAA domain (Cdc48 subfamily),"C-terminal, D2-small domain, of ClpB protein","Clp amino terminal domain, pathogenicity island component",ATPase family associated with various cellular activities (AAA),AAA lid domain	655,837,95,313,456	831,915,143,422,560	3.30E-52,1.10E-22,4.30E-08,2.70E-09,4.90E-29
+AT5G45390.1	Pfam	PF00574	Clp protease	78	251	5.20E-72
+AT1G68660.1	Pfam	PF02617	ATP-dependent Clp protease adaptor protein ClpS	79	145	1.70E-18
+AT3G48870.1	Pfam	PF10431,PF02861,PF07724,PF17871,PF00004	C-terminal, D2-small domain, of ClpB protein,"Clp amino terminal domain, pathogenicity island component",AAA domain (Cdc48 subfamily),AAA lid domain,ATPase family associated with various cellular activities (AAA)	838,205,657,458,320	918,256,831,556,436	5.90E-23,1.60E-18,1.60E-54,1.20E-34,6.80E-14
+AT5G50920.1	Pfam	PF02861,PF00004,PF10431,PF07724,PF17871	Clp amino terminal domain, pathogenicity island component,ATPase family associated with various cellular activities (AAA),"C-terminal, D2-small domain, of ClpB protein",AAA domain (Cdc48 subfamily),AAA lid domain	185,299,817,636,437	236,415,897,810,538	1.50E-18,4.20E-14,2.80E-23,2.50E-55,2.70E-34
+AT1G33360.1	Pfam	PF07724,PF10431	AAA domain (Cdc48 subfamily),"C-terminal, D2-small domain, of ClpB protein"	308,518	511,589	1.30E-42,5.40E-12
+AT1G66670.1	Pfam	PF00574	Clp protease	84	257	3.00E-72
+AT1G09130.1	Pfam	PF00574	Clp protease	123	303	9.00E-43
+AT2G03390.1	Pfam	PF08755,PF02151	Hemimethylated DNA-binding protein YccV like,UvrB/uvrC motif	205,155	300,187	1.80E-25,3.80E-09
+AT5G23140.1	Pfam	PF00574	Clp protease	42	221	1.90E-80
+AT1G74310.1	Pfam	PF02861,PF10431,PF00004,PF17871,PF07724	Clp amino terminal domain, pathogenicity island component,"C-terminal, D2-small domain, of ClpB protein",ATPase family associated with various cellular activities (AAA),AAA lid domain,AAA domain (Cdc48 subfamily)	17,768,204,344,598	57,847,317,442,762	9.30E-08,1.70E-21,1.40E-13,7.40E-35,1.80E-52
+AT1G12410.1	Pfam	PF00574	Clp protease	84	261	1.80E-63
+AT1G02560.1	Pfam	PF00574	Clp protease	109	287	2.00E-80
+AT4G14670.1	Pfam	PF07724,PF00004,PF02861,PF17871	AAA domain (Cdc48 subfamily),ATPase family associated with various cellular activities (AAA),"Clp amino terminal domain, pathogenicity island component",AAA lid domain	563,169,77,309	621,286,122,408	1.00E-13,4.30E-12,2.30E-06,1.20E-32
+AT1G49970.1	Pfam	PF00574	Clp protease	173	354	6.50E-37
+ATCG00670.1	Pfam	PF00574	Clp protease	17	194	1.00E-66
+AT2G25140.1	Pfam	PF07724,PF10431,PF17871,PF02861,PF00004	AAA domain (Cdc48 subfamily),"C-terminal, D2-small domain, of ClpB protein",AAA lid domain,"Clp amino terminal domain, pathogenicity island component",ATPase family associated with various cellular activities (AAA)	681,857,423,176,285	850,937,525,226,419	3.70E-55,1.90E-23,6.40E-34,4.30E-08,4.70E-14
+AT5G49840.1	Pfam	PF07724,PF10431	AAA domain (Cdc48 subfamily),"C-terminal, D2-small domain, of ClpB protein"	262,474	467,545	2.10E-40,9.80E-14
+AT4G12060.1	Pfam	PF02861	Clp amino terminal domain, pathogenicity island component	197	232	0.0031

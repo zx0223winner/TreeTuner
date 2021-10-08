@@ -1,2 +1,2 @@
 # TreeTuner
-an online tool for creating personalized phylogenetic tree with important links
+A pipeline to coarse and fine-tuning large phylogenetic datasets via minimizing the redundancy and complexity

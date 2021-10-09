@@ -1,5 +1,9 @@
 import sys
 
+if len(sys.argv)!=3: #if the input arguments not 4, showing the usage.
+        print(" Usage: python3 Pfam_to_one_line.py <inputfile.interproscan.tsv> <output file> <parameter: i.e., Pfam>")
+        sys.exit()
+
 class gggg:
 	def __init__(self, a, b, c, d):
 		self.a = a
@@ -15,7 +19,7 @@ all_list = []
 for line in handle:
 	line = line.strip('\n')
 	items = line.split('\t')
-	if items[3] == "Pfam":
+	if items[3] == sys.argv[3]: #"Pfam":
 		all_list.append(gggg(items[0],items[3],items[4],items[5]))
 
 # output_list = []

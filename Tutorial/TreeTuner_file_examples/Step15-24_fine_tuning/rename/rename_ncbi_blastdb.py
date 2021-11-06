@@ -83,8 +83,8 @@ def renameSequence(fastaFile, fastaDict, geneList):
 	ncbi = NCBITaxa()
 	# Upgrade NCBI local database
 	# Uncomment the two lines blow to upgrade your ncbi taxa database
-	#print("Upgrading NCBI local database...")
-	#ncbi.update_taxonomy_database()
+	print("Upgrading NCBI local database...")
+	ncbi.update_taxonomy_database()
 	print("Renaming fasta file...")
 	with open(sys.argv[3], 'w') as outFileHandler:
 		for gene in geneList:

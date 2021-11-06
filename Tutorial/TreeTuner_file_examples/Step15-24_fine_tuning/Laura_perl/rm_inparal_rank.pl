@@ -5,7 +5,7 @@
 # Author: Laura Eme
 ###################################################################################
 
-use lib '/Users/zxwinner/Desktop/draft_manuscript/Step15-24_fine_tuning/Laura_perl';
+use lib '/paste/your/directory/Laura_perl';
 # change the lib directory to where contain "lauralib.pm" perl module
 use lauralib;
 use Bio::TreeIO;
@@ -229,8 +229,7 @@ while ($nb_removed > 0){
 	if($nb_removed > 0){
 
 		##### Reconstruction of the tree ######
-		$commande = "/Users/zxwinner/Desktop/draft_manuscript/Step15-24_fine_tuning/Laura_perl/FastTree ".$out_align." > ".$inalign.".fasttree";
-		#$commande = "/paste/your/directory/here/FastTree ".$out_align." > ".$inalign.".fasttree";
+		$commande = "/paste/your/directory/Laura_perl/FastTree ".$out_align." > ".$inalign.".fasttree";
 		#$commande = "/home/leme/bin/FastTree ".$out_align." > ".$inalign.".fasttree";
 		# change the lib directory to where contain FastTree.c
 		print "\n\nTree reconstruction : \n",$commande,"\n";

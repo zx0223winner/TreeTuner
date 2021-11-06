@@ -5,7 +5,7 @@
 # Author: Laura Eme
 ###################################################################################
 
-use lib '/Users/zxwinner/Desktop/draft_manuscript/Step15-24_fine_tuning/Laura_perl';
+use lib '/paste/your/directory/Laura_perl';
 # change the lib directory to where contain "lauralib.pm" perl module
 use lauralib ;
 use Bio::SeqIO::fasta; 

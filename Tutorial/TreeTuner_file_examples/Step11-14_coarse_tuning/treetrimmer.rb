@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 # 
-# ver.130412
+# ver.v2.5.1
 #
 # [ Reference ]
 # Shinichiro Maruyama / Robert J. M. Eveleigh / John M. Archibald

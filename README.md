@@ -1,7 +1,7 @@
 # TreeTuner
 A pipeline to coarse and fine-tuning large phylogenetic datasets via minimizing the redundancy and complexity
 
-
+```
 ├── blastdbv5_user_guide.pdf
 ├── Online_TreeTuner Tutorial.pdf
 ├── Step10_building_preliminary_tree
@@ -66,3 +66,4 @@ A pipeline to coarse and fine-tuning large phylogenetic datasets via minimizing 
     └── clps_taxonomic_info.txt
 
 10 directories, 52 files
+```

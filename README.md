@@ -1,34 +1,36 @@
 # TreeTuner
 A pipeline to coarse and fine-tuning large phylogenetic datasets via minimizing the redundancy and complexity
 
-### 1. [NoBadWordsCombiner](http://hsdfinder.com/combiner/) 
-automatically integrate the gene models annotations (e.g., NCBI, SwissProt, etc.), and minimize those "bad words" (e.g., hypothetical and uncharacterized proteins)
+### 1. What's TreeTuner Pipeline?
+The TreeTuner pipeline combines the software and tools required for both coarse- and fine-scale tuning. 
 
-### 2. What's NoBadWordsCombiner?
-Unlike the NCBI-NR or UniProtKB/Swiss-Prot, although they provide valuable function description of the interested genes; however, many hypothetical proteins or ‘bad name’ proteins are also included in the respective database, which will mess up the interpretation of functional gene annotations. Although it is not the focus of this article, we have developed another software can integrate the gene function information together minimize ‘bad words’ including Nr-NCBI, UniProtKB/Swiss-Prot, KEGG, and Pfam etc..
+- For coarse tuning, TreeTrimmer (Maruyama et al., 2013) can be downloaded from the web (https://code.google.com/archive/p/treetrimmer/). To run TreeTrimmer locally, pre-installed Ruby (i.e., Ruby v2.5.1) is required. 
+
+- For fine tuning, the necessary custom Perl scripts (rm_inparal_rank.pl and trim2untrim.pl) and Python script (rename_ncbi_blastdb.py) can be found at the following GitHub website: https://github.com/zx0223winner/TreeTuner. Pre-installed Perl (e.g., Perl 5) is required to run these scripts. 
+
+- To color the Newick tree, the Environment for Tree Exploration (ETE3) toolkit (Huerta-Cepas et al., 2016) and associated Python scripts (e.g., color_coarse_tuning_tree.py and color_fine_tuning_tree.py) are needed. 
+
+### 2. Environmental Requirement
+TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to run their BLAST searches (Altschul et al., 1997). The MAFFT v7(Katoh and Standley, 2013), BMGE v1.12 (Criscuolo and Gribaldo, 2010), trimAl v1.4 (Capella-Gutiérrez et al., 2009), FastTree v2.1 (Price et al., 2010) and IQ-TREE v1.6.12 (Nguyen et al., 2015)
+
 ```
-#Environmental Requirement: Pandas
-#To collect pandas packages : 
+#Linux environment (e.g., Ubuntu 20.04 LTS)
+#Ruby v2.5.1
+#Perl 5
+#Python 3
 
-sudo pip install pandas
-python NoBadWordsCombiner.py -h
-python NoBadWordsCombiner.py -n <NCBI file> -s <Swiss file> -g <Gene list file> -k <Gene list file with KO annotation> -p <pfam file> -t <type> -o <output file name>
+# Install python3 
+>pip3 install python
 
-# Or use 
-python NoBadWordsCombiner.py --ncbi_file=<NCBI file> --swiss_file=<Swiss file> --gene_file=<Gene list file> --ko_file=<Gene list file with KO annotation> --pfam_file=<pfam file> --type=<type> -output_file=<output file name>
+# Install ETE3 toolkit
+>pip3 install ete
+
+# Install ETE tree browser
+>pip3 install PyQt5
+
 ```
 
-### 3.Limitation
-There is a possible steep learning curve for users with limited knowledge of bioinformatics, especially for those who are not familiar with the basic BLAST package and dash shell in a Linux/Unix environment. We do hope to further develop the tool, making it more user friendly, including trying to remove some of the middle steps. Unfortunately, we are not yet able to provide a “one-click solution” because of the incompatibility of the various databases employed by the tool. That said, we still believe that our tool is comparatively easier to use than some of the other options currently available to scientists. Indeed, presently there are very few tools that can search eukaryotic genome projects, efficiently merging hits from various databases and strengthening gene definitions by minimizing functional descriptions containing ‘bad words’. Thus, we believe that our tool will provide a well-needed service to the bioinformatics and genomics community.
-
-### 4. Reference
-X. Zhang, Yining. Hu, D. Smith (2021). Protocol for using NoBadWordsCombiner to merge and minimize ‘bad words’ from BLAST hits against multiple eukaryotic gene annotation databases etc. doi: upcoming
-
-X. Zhang, et.al. D. Smith (2021). Draft genome sequence of the Antarctic green alga _Chlamydomonas_ sp. UWO241 DOI:https://doi.org/10.1016/j.isci.2021.102084
-
-### 5. Contact
-Usage of this site follows AWS’s Privacy Policy. © Copyright (C) 2021
-
+### 3. File index
 
 ```
 ├── blastdbv5_user_guide.pdf
@@ -96,3 +98,13 @@ Usage of this site follows AWS’s Privacy Policy. © Copyright (C) 2021
 
 10 directories, 52 files
 ```
+### 3.Limitation
+Taxonomy-based dataset trimming might result in biased OTU retention because highly diverse clades may be represented by more leaves than less diverse ones. Also, the TreeTuner pipeline is not fully automated and relies on user-defined OTUs. Nevertheless, we provide a step-by-step solution to guide users who need to trim down their large phylogenetic datasets for more rigorous downstream analysis.
+
+### 4. Reference
+
+- Maruyama, S., Eveleigh, R. J. & Archibald, J. M. 2013. Treetrimmer: a method for phylogenetic dataset size reduction. BMC research notes, 6, 1-6.
+- Sibbald, S. J., Hopkins, J. F., Filloramo, G. V. & Archibald, J. M. 2019. Ubiquitin fusion proteins in algae: implications for cell biology and the spread of photosynthesis. BMC genomics, 20, 1-13.
+
+### 5. Contact
+Usage of this site follows MIT’s Privacy Policy. © Copyright (C) 2021

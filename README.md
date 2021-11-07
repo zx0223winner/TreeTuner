@@ -106,5 +106,5 @@ Taxonomy-based dataset trimming might result in biased OTU retention because hig
 - Maruyama, S., Eveleigh, R. J. & Archibald, J. M. 2013. Treetrimmer: a method for phylogenetic dataset size reduction. BMC research notes, 6, 1-6.
 - Sibbald, S. J., Hopkins, J. F., Filloramo, G. V. & Archibald, J. M. 2019. Ubiquitin fusion proteins in algae: implications for cell biology and the spread of photosynthesis. BMC genomics, 20, 1-13.
 
-### 5. Contact
-Usage of this site follows MIT’s Privacy Policy. © Copyright (C) 2021
+### 5. Copyright
+Usage of this pipeline follows GPL-3.0 License. © Copyright (C) 2021. If you think this work is useful, please cite the related references above after using.

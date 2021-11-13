@@ -60,11 +60,11 @@ TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to
 │   ├── clps.aligned.trimmed.fasta
 │   └── clps.aligned.trimmed.newick
 ├── Step11-14_**coarse_tuning**
-│   ├── clps_aligned_trimmed.newick__AT1G68660.1_parameter_input.in.tt0.01.tre
+│   ├── clps_aligned_trimmed.newick__AT1G68660.1_parameter_input.in.tt0.0.tre
 │   ├── clps_treetrimmer.out
 │   ├── color_tree
-│   │   ├── AT1G68660.1_aligned_trimmed.newick__AT1G68660.1_parameter_input.in.tt0.01.tre.png
-│   │   ├── clps_aligned_trimmed.newick__AT1G68660.1_parameter_input.in.tt0.01.tre
+│   │   ├── AT1G68660.1_aligned_trimmed.newick__AT1G68660.1_parameter_input.in.tt0.0.tre.png
+│   │   ├── clps_aligned_trimmed.newick__AT1G68660.1_parameter_input.in.tt0.0.tre
 │   │   ├── clps_taxonomic_info_clean.txt
 │   │   └── color_coarse_tuning_tree.py
 │   ├── ReadME.txt

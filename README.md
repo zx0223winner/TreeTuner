@@ -43,7 +43,83 @@ TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to
 
 ```
 
-### 3. File index
+### 3. Instructions for adjusting parameter in Coarse- and fine-tuning pipeline
+
+Here is an example file (i.e., clps_paramer_input.in) for the parameters in coarse-tuning pepiline
+```
+### TreeTrimmer parameter input file
+
+### The cutoff value for de-replication
+# Specify a cutoff of support values (e.g. bootstrap values, posterior probability)
+# either in integer (0-100) or decimal (0.0-1.0).
+# Leave it blank or use default (0.0) for trees with no branch supports.
+
+cutoff=0.01
+
+### Query tag (optional: default is "query_tag=QUERY")
+# If a tree includes a 'query' OTU, which is used as a reference 
+# and is supposed to be retained after the de-replication process, 
+# a string in the OTU name can be specified as a tag to avoid removal 
+
+query_tag=564937
+
+### Delimiter for categories of the taxonomic information
+# (default: "taxon_delimiter=;\s" [semicolon plus single space])
+# Only use regular expression for a space character
+
+taxon_delimiter=;\s 
+
+### Which taxonomic categories should be pruned? How many OTUs should be retained?
+# The category information can be provided in Taxonomic_information_file,
+# otherwise OTU names are used as labels of taxonomic information.
+# example: Bacteria	2 (tab-delimited)
+
+Bacteria	4
+Archaea	3
+Eukaryota	1
+
+### How many OTUs should be retained in each supported branch of the tree unless specified above?
+
+num_retained=1
+
+
+
+```
+
+Here is an example file (i.e., taxa_not_remove.txt and taxa_rank.txt) for the parameters in fine-tuning pepiline
+```
+#### Trim your tree to reduce taxonomic redundancy  ####
+
+	## 'taxa_not_remove.txt' contains a list of taxa/phyla you don't want to reduce (script looks for match to strings provided here)
+
+	## 'taxa_rank.txt' contains information on how to reduce specific genera/phyla/kingdoms... the way I have it, it will reduce at the phyla/class  (0 = domain, 1 = kingdom, 2 = phyla/class etc.)
+
+
+	# the taxa rank is determined based on specific header formats as follows and the perl script will need to be modified if your header differs 
+
+	# >Symbiodinium_sp@CP_0181467638_Eukaryota_Alveolata_Dinophyceae_Suessiales_Symbiodiniaceae_Symbiodinium_zzz_CP_0181467638_174948_Symbiodinium_sp_CCMP421
+	
+	# 1.0 is the distance cutoff you want to consider (greater than this and won't assess for removal)
+	rm_inparal_rank.pl $FASTTREE $ALIGNEMNET 1.0 taxa_not_remove.txt taxa_rank.txt
+	
+	
+	## Then you run the following script to go from Will remove sequences from the untrimmed alignement based on sequences present in the trimmed alignement
+
+	#trim2untrim.pl [trimmed alignement (.genus_trimmed)] [untrimmed alignment (original alignment or unaligned FASTA File)]
+
+	trim2untrim.pl $GENE.qalign.genus_trimmed $GENE.qalign
+	# OR
+	trim2untrim.pl $GENE.qalign.genus_trimmed $GENE.original.fasta
+
+
+
+perl rm_inparal_rank.pl renamed_clps_aligned_trimmed.newick renamed_clps_aligned_trimmed.fasta 10 taxa_not_remove.txt taxa_rank.txt
+
+perl trim2untrim.pl renamed_clps_aligned_trimmed.fasta.genus_trimmed renamed_clps_aligned_trimmed.fasta
+
+```
+
+### 4. File index
 
 ```
 ├── TreeTuner pipeline
@@ -111,10 +187,10 @@ TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to
 
 10 directories, 52 files
 ```
-### 3.Limitation
+### 5.Limitation
 Taxonomy-based dataset trimming might result in biased OTU retention because highly diverse clades may be represented by more leaves than less diverse ones. Also, the TreeTuner pipeline is not fully automated and relies on user-defined OTUs. Nevertheless, we provide a step-by-step solution to guide users who need to trim down their large phylogenetic datasets for more rigorous downstream analysis.
 
-### 4. Reference
+### 6. Reference
 - Zhang X., Hu Y., Eme L., Maruyama S.,Eveleigh R.JM, Curtis B.A., Sibbald S.J., Hopkins J.F., Filloramo1 G.V.,Wijk K.J.V., Archibald J.M., 2021.Protocol for TreeTuner: A pipeline for minimizing redundancy and complexity in large phylogenetic datasets. doi: upcoming
 - Maruyama, S., Eveleigh, R. J. & Archibald, J. M. 2013. Treetrimmer: a method for phylogenetic dataset size reduction. BMC research notes, 6, 1-6.
 - Sibbald, S. J., Hopkins, J. F., Filloramo, G. V. & Archibald, J. M. 2019. Ubiquitin fusion proteins in algae: implications for cell biology and the spread of photosynthesis. BMC genomics, 20, 1-13.

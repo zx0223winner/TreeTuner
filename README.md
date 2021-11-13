@@ -54,7 +54,7 @@ Here is an example file (i.e., clps_paramer_input.in) for the parameters in coar
 # either in integer (0-100) or decimal (0.0-1.0).
 # Leave it blank or use default (0.0) for trees with no branch supports.
 
-cutoff=0.01
+cutoff=0.0
 
 ### Query tag (optional: default is "query_tag=QUERY")
 # If a tree includes a 'query' OTU, which is used as a reference 
@@ -86,7 +86,7 @@ num_retained=1
 
 ```
 
-Here is an example file (i.e., taxa_not_remove.txt and taxa_rank.txt) for the parameters in fine-tuning pepiline
+Here is the guide for setting the parameters in fine-tuning pepiline
 ```
 #### Trim your tree to reduce taxonomic redundancy  ####
 

@@ -94,7 +94,6 @@ Here is the guide for setting the parameters in fine-tuning pepiline
 
 	## 'taxa_rank.txt' contains information on how to reduce specific genera/phyla/kingdoms... the way I have it, it will reduce at the phyla/class  (0 = domain, 1 = kingdom, 2 = phyla/class etc.)
 
-
 	# the taxa rank is determined based on specific header formats as follows and the perl script will need to be modified if your header differs 
 
 	# >Symbiodinium_sp@CP_0181467638_Eukaryota_Alveolata_Dinophyceae_Suessiales_Symbiodiniaceae_Symbiodinium_zzz_CP_0181467638_174948_Symbiodinium_sp_CCMP421
@@ -110,8 +109,6 @@ Here is the guide for setting the parameters in fine-tuning pepiline
 	trim2untrim.pl $GENE.qalign.genus_trimmed $GENE.qalign
 	# OR
 	trim2untrim.pl $GENE.qalign.genus_trimmed $GENE.original.fasta
-
-
 
 perl rm_inparal_rank.pl renamed_clps_aligned_trimmed.newick renamed_clps_aligned_trimmed.fasta 10 taxa_not_remove.txt taxa_rank.txt
 

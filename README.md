@@ -1,5 +1,6 @@
 # TreeTuner
 A pipeline to coarse and fine-tuning large phylogenetic datasets via minimizing the redundancy and complexity
+<img src="https://github.com/zx0223winner/TreeTuner/blob/main/TreeTuner_workflow.jpg" alt="TreeTuner" width="1600px" height="">
 
 ### 1. What's TreeTuner Pipeline?
 The TreeTuner pipeline combines the software and tools required for both coarse- and fine-scale tuning. 

@@ -10,7 +10,7 @@ The TreeTuner pipeline combines the software and tools required for both coarse-
 ```
 Usage: ruby treetrimmer.rb [Newick_tree_file] [Parameter_input_file] [Taxonomic_information_file] > output_file
 ```
-- For fine tuning, the necessary custom Perl scripts (rm_inparal_rank.pl and trim2untrim.pl) and Python script (rename_ncbi_blastdb.py) can be found at the following GitHub website: https://github.com/zx0223winner/TreeTuner. Pre-installed Perl (e.g., Perl 5) is required to run these scripts. 
+- For fine tuning, the necessary custom Perl scripts (rm_inparal_rank.pl and trim2untrim.pl) and Python script (rename_ncbi_blastdb.py) can be found at the following GitHub website: https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/Laura_perl. Pre-installed Perl (e.g., Perl 5) is required to run these scripts. 
 
 ```
 #Renaming the header of protein ID so as to pull out the taxonomic terms in the header.

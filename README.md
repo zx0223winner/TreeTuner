@@ -13,6 +13,11 @@ Usage: ruby treetrimmer.rb [Newick_tree_file] [Parameter_input_file] [Taxonomic_
 - For fine tuning, the necessary custom Perl scripts (rm_inparal_rank.pl and trim2untrim.pl) and Python script (rename_ncbi_blastdb.py) can be found at the following GitHub website: https://github.com/zx0223winner/TreeTuner. Pre-installed Perl (e.g., Perl 5) is required to run these scripts. 
 
 ```
+#Renaming the header of protein ID so as to pull out the taxonomic terms in the header.
+Usage:python3 rename_ncbi_blastdb.py <FASTA File> <Taxon Id FILE> <Renamed FASTA File>
+```
+
+```
 Usage: perl rm_inparal_rank.pl [tree file] [alignment file] [distance cutoff] [taxa not to remove] [taxa rank]
 Usage: perl trim2untrim.pl [trimmed alignement] [untrimmed alignment]
 ```

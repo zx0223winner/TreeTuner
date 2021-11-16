@@ -1,0 +1,3 @@
+Bacteria 3
+Archaea 2
+Eukaryota 3

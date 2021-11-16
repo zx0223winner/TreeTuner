@@ -15,9 +15,7 @@ Usage: ruby treetrimmer.rb [Newick_tree_file] [Parameter_input_file] [Taxonomic_
 ```
 #Renaming the header of protein ID so as to pull out the taxonomic terms in the header.
 Usage:python3 rename_ncbi_blastdb.py <FASTA File> <Taxon Id FILE> <Renamed FASTA File>
-```
 
-```
 Usage: perl rm_inparal_rank.pl [tree file] [alignment file] [distance cutoff] [taxa not to remove] [taxa rank]
 Usage: perl trim2untrim.pl [trimmed alignement] [untrimmed alignment]
 ```

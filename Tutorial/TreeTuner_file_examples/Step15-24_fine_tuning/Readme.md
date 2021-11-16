@@ -1,5 +1,18 @@
+Here have three directories, 
 
 
+- For fine tuning, the necessary custom Perl scripts (rm_inparal_rank.pl and trim2untrim.pl) and Python script (rename_ncbi_blastdb.py) can be found at the following GitHub website: https://github.com/zx0223winner/TreeTuner. Pre-installed Perl (e.g., Perl 5) is required to run these scripts. 
+
+```
+Usage: perl rm_inparal_rank.pl [tree file] [alignment file] [distance cutoff] [taxa not to remove] [taxa rank]
+Usage: perl trim2untrim.pl [trimmed alignement] [untrimmed alignment]
+```
+- To color the Newick tree, the Environment for Tree Exploration (ETE3) toolkit (Huerta-Cepas et al., 2016) and associated Python scripts (e.g., color_coarse_tuning_tree.py and color_fine_tuning_tree.py) are needed. 
+
+```
+Usage: python3 color_coarse_tuning_tree.py <taxonomic_info_file> <newick_tree_file>
+Usage: python3 color_fine_tuning_tree.py <newick_tree_file> 
+```
 
 Here is the guide for setting the parameters in `fine-tuning pepiline`
 

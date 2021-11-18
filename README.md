@@ -2,7 +2,7 @@
 A pipeline to coarse and fine-tuning large phylogenetic datasets via minimizing the redundancy and complexity
 <img src="https://github.com/zx0223winner/TreeTuner/blob/main/TreeTuner_workflow.jpg" alt="TreeTuner" width="3200px" height="">
 
-### 1. What's TreeTuner Pipeline?
+### 1. What is TreeTuner Pipeline?
 The TreeTuner pipeline combines the software and tools required for both coarse- and fine-scale tuning. 
 
 - For coarse tuning, TreeTrimmer (Maruyama et al., 2013) can be downloaded from the web (https://code.google.com/archive/p/treetrimmer/). To run TreeTrimmer locally, pre-installed Ruby (i.e., Ruby v2.5.1) is required. 
@@ -26,7 +26,7 @@ Usage: python3 color_coarse_tuning_tree.py <taxonomic_info_file> <newick_tree_fi
 Usage: python3 color_fine_tuning_tree.py <newick_tree_file> 
 ```
 
-### 2. Environmental Requirement
+### 2. Computational Requirement
 TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to run their BLAST searches (Altschul et al., 1997). The MAFFT v7(Katoh and Standley, 2013), BMGE v1.12 (Criscuolo and Gribaldo, 2010), trimAl v1.4 (Capella-Gutiérrez et al., 2009), FastTree v2.1 (Price et al., 2010) and IQ-TREE v1.6.12 (Nguyen et al., 2015)
 
 ```
@@ -45,7 +45,7 @@ TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to
 >pip3 install PyQt5
 ```
 
-### 3. Instructions for adjusting parameter in Coarse- and fine-tuning pipeline
+### 3. Instructions for adjusting parameters in Coarse- and fine-tuning pipeline
 
 Here is an example file (i.e., clps_paramer_input.in) for the parameters in `coarse-tuning pepiline`
 ```
@@ -189,10 +189,10 @@ Eukaryota 3
 
 10 directories, 52 files
 ```
-### 5.Limitation
+### 5.Limitations
 Taxonomy-based dataset trimming might result in biased OTU retention because highly diverse clades may be represented by more leaves than less diverse ones. Also, the TreeTuner pipeline is not fully automated and relies on user-defined OTUs. Nevertheless, we provide a step-by-step solution to guide users who need to trim down their large phylogenetic datasets for more rigorous downstream analysis.
 
-### 6. Reference
+### 6. References
 - Zhang X., Hu Y., Eme L., Maruyama S.,Eveleigh R.JM, Curtis B.A., Sibbald S.J., Hopkins J.F., Filloramo1 G.V.,Wijk K.J.V., Archibald J.M., 2021.Protocol for TreeTuner: A pipeline for minimizing redundancy and complexity in large phylogenetic datasets. doi: upcoming
 - Maruyama, S., Eveleigh, R. J. & Archibald, J. M. 2013. Treetrimmer: a method for phylogenetic dataset size reduction. BMC research notes, 6, 1-6.
 - Sibbald, S. J., Hopkins, J. F., Filloramo, G. V. & Archibald, J. M. 2019. Ubiquitin fusion proteins in algae: implications for cell biology and the spread of photosynthesis. BMC genomics, 20, 1-13.

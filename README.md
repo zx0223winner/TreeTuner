@@ -7,12 +7,12 @@ The TreeTuner pipeline combines the software and tools required for both coarse-
 
 - For coarse tuning, TreeTrimmer (Maruyama et al., 2013) can be downloaded from the web (https://code.google.com/archive/p/treetrimmer/). To run TreeTrimmer locally, pre-installed Ruby (i.e., Ruby v2.5.1) is required. 
 
-```
+```ruby
 Usage: ruby treetrimmer.rb [Newick_tree_file] [Parameter_input_file] [Taxonomic_information_file] > output_file
 ```
 - For fine tuning, the necessary custom Perl scripts (rm_inparal_rank.pl and trim2untrim.pl) and Python script (rename_ncbi_blastdb.py) can be found at the following GitHub website: https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/Laura_perl. Pre-installed Perl (e.g., Perl 5) is required to run these scripts. 
 
-```
+```perl
 #Renaming the header of protein ID so as to pull out the taxonomic terms in the header.
 Usage:python3 rename_ncbi_blastdb.py <FASTA File> <Taxon Id FILE> <Renamed FASTA File>
 
@@ -21,7 +21,7 @@ Usage: perl trim2untrim.pl [trimmed alignement] [untrimmed alignment]
 ```
 - To color the Newick tree, the Environment for Tree Exploration (ETE3) toolkit (Huerta-Cepas et al., 2016) and associated Python scripts (e.g., color_coarse_tuning_tree.py and color_fine_tuning_tree.py) are needed. 
 
-```
+```python
 Usage: python3 color_coarse_tuning_tree.py <taxonomic_info_file> <newick_tree_file>
 Usage: python3 color_fine_tuning_tree.py <newick_tree_file> 
 ```
@@ -29,7 +29,7 @@ Usage: python3 color_fine_tuning_tree.py <newick_tree_file>
 ### 2. Computational Requirement
 TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to run their BLAST searches (Altschul et al., 1997). The MAFFT v7(Katoh and Standley, 2013), BMGE v1.12 (Criscuolo and Gribaldo, 2010), trimAl v1.4 (Capella-Gutiérrez et al., 2009), FastTree v2.1 (Price et al., 2010) and IQ-TREE v1.6.12 (Nguyen et al., 2015)
 
-```
+```unix
 #Linux environment (e.g., Ubuntu 20.04 LTS)
 #Ruby v2.5.1
 #Perl 5

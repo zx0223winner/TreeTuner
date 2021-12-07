@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/env/perl
 #
 # Script name: 
 # Version 1.0 (Nov 14th, 2011)

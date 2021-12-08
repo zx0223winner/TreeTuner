@@ -58,7 +58,7 @@ TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to
 4. [FastTree v2.1](http://www.microbesonline.org/fasttree/)
 5. [IQ-TREE v1.6.12](http://www.iqtree.org)
 
-'Color the Newick Tree`:
+`Color the Newick Tree`:
 1. [python3](https://www.python.org/downloads/)
 2. [ETE3 toolkit](http://etetoolkit.org/download/)
 3. [ETE tree browser](http://etetoolkit.org/download/)

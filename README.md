@@ -29,21 +29,41 @@ Usage: python3 color_fine_tuning_tree.py <newick_tree_file>
 ### 2. Computational Requirement
 TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to run their BLAST searches (Altschul et al., 1997). The MAFFT v7(Katoh and Standley, 2013), BMGE v1.12 (Criscuolo and Gribaldo, 2010), trimAl v1.4 (Capella-Gutiérrez et al., 2009), FastTree v2.1 (Price et al., 2010) and IQ-TREE v1.6.12 (Nguyen et al., 2015)
 
-```unix
-#Linux environment (e.g., Ubuntu 20.04 LTS)
-#Ruby v2.5.1
-#Perl 5
-#Python 3
 
-# Install python3 
->pip3 install python
+#### 2.1 Dependencies and versions
 
-# Install ETE3 toolkit
->pip3 install ete
+`Preparing the BLAST results`:
+1. [Linux environment (e.g., Ubuntu 20.04 LTS)](https://ubuntu.com/download/desktop)
+2. [BLAST searches (e.g., ncbi-blast-2.12.0)](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+3. [NCBI-nr BLAST v5 database](https://ftp.ncbi.nlm.nih.gov/blast/db) 
+4. [Batch Entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez) 
+5. [SeqKit](https://bioinf.shenwei.me/seqkit/) 
 
-# Install ETE tree browser
->pip3 install PyQt5
-```
+`Coarse-tuning pipeline`:
+1. [Ruby v2.5.1](https://www.ruby-lang.org/en/downloads/)
+2. [acc2tax](https://github.com/richardmleggett/acc2tax) 
+3. [NCBI taxonomy database](https://ftp.ncbi.nih.gov/pub/taxonomy/)
+4. [TreeTrimmer](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step11-14_coarse_tuning)
+
+`Fine-tuning pipeline`:
+1. [Perl 5](https://www.perl.org/get.html)
+2. [Python 3](https://www.python.org/downloads/)
+3. [Laura_perl](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/Laura_perl)
+4. [rename_ncbi_blastdb.py](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/rename)
+
+`Build a preliminary tree`: 
+1. [MAFFT v7](https://mafft.cbrc.jp/alignment/software/) 
+2. [BMGE v1.12](https://bio.tools/bmge) 
+3. [trimAl v1.4](http://trimal.cgenomics.org)
+4. [FastTree v2.1](http://www.microbesonline.org/fasttree/)
+5. [IQ-TREE v1.6.12](http://www.iqtree.org)
+
+'Color the Newick Tree`:
+1. [python3](https://www.python.org/downloads/)
+2. [ETE3 toolkit](http://etetoolkit.org/download/)
+3. [ETE tree browser](http://etetoolkit.org/download/)
+4. [color_coarse_tuning_tree.py](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step11-14_coarse_tuning/color_tree)
+5. [color_fine_tuning_tree.py](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/color_tree)
 
 ### 3. Instructions for adjusting parameters in Coarse- and fine-tuning pipeline
 

@@ -61,9 +61,8 @@ TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to
 `Color the Newick Tree`:
 1. [python3](https://www.python.org/downloads/)
 2. [ETE3 toolkit](http://etetoolkit.org/download/)
-3. [ETE tree browser](http://etetoolkit.org/download/)
-4. [color_coarse_tuning_tree.py](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step11-14_coarse_tuning/color_tree)
-5. [color_fine_tuning_tree.py](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/color_tree)
+3. [color_coarse_tuning_tree.py](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step11-14_coarse_tuning/color_tree)
+4. [color_fine_tuning_tree.py](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/color_tree)
 
 ### 3. Instructions for adjusting parameters in Coarse- and fine-tuning pipeline
 

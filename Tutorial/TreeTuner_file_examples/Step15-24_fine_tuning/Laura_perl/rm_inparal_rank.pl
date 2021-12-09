@@ -1,9 +1,26 @@
 #!/usr/env/perl
-#
-# Script name: 
-# Version 1.0 (Nov 14th, 2011)
-# Author: Laura Eme
 ###################################################################################
+# TreeTuner v1.0
+# Script name: 
+# Version 1.0 (Dec 9th, 2021)
+# Author: Laura Eme
+
+# Copyright 2021 Zhang X., Hu Y., Eme L., Maruyama S.,Eveleigh R.JM, Curtis B.A., Sibbald S.J., Hopkins J.F., Filloramo1 G.V.,Wijk K.J.V., Archibald J.M.
+# Zhang X., Hu Y., Eme L., Maruyama S.,Eveleigh R.JM, Curtis B.A., Sibbald S.J., Hopkins J.F., Filloramo1 G.V.,Wijk K.J.V., Archibald J.M., 2021.Protocol for TreeTuner: A pipeline for minimizing redundancy and complexity in large phylogenetic datasets
+# Usage of this pipeline follows GPL-3.0 License. © Copyright (C) 2021. If you think this work is useful, please cite the related references above after using.
+
+#   This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 use FindBin;
 use lib "$FindBin::Bin/";

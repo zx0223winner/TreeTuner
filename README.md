@@ -33,39 +33,54 @@ Usage: python3 color_fine_tuning_tree.py <newick_tree_file>
 TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to run their BLAST searches (Altschul et al., 1997). The MAFFT v7(Katoh and Standley, 2013), BMGE v1.12 (Criscuolo and Gribaldo, 2010), trimAl v1.4 (Capella-Gutiérrez et al., 2009), FastTree v2.1 (Price et al., 2010) and IQ-TREE v1.6.12 (Nguyen et al., 2015)
 
 
-#### 2.1 Dependencies and versions
+#### 2.1 Dependencies, package/script versions and directory paths
 
-`Preparing the BLAST results`:
+`Step 1-9: Preparing the BLAST results`
+> cd /Your/Directory/Path/TreeTuner/Tutorial/TreeTuner_file_examples/Step1-9_preparing_input_files/
 1. [Linux environment (e.g., Ubuntu 20.04 LTS)](https://ubuntu.com/download/desktop)
 2. [BLAST searches (e.g., ncbi-blast-2.12.0)](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
 3. [NCBI-nr BLAST v5 database](https://ftp.ncbi.nlm.nih.gov/blast/db) 
 4. [Batch Entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez) 
 5. [SeqKit](https://bioinf.shenwei.me/seqkit/) 
 
-`Coarse-tuning pipeline`:
-1. [Ruby v2.5.1](https://www.ruby-lang.org/en/downloads/)
-2. [acc2tax](https://github.com/richardmleggett/acc2tax) 
-3. [NCBI taxonomy database](https://ftp.ncbi.nih.gov/pub/taxonomy/)
-4. [TreeTrimmer](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step11-14_coarse_tuning)
-
-`Fine-tuning pipeline`:
-1. [Perl 5](https://www.perl.org/get.html)
-2. [Python 3](https://www.python.org/downloads/)
-3. [Laura_perl](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/Laura_perl)
-4. [rename_ncbi_blastdb.py](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/rename)
-
-`Build a preliminary tree`: 
+`Step 10 & 17: Build a preliminary tree`
+> cd /Your/Directory/Path/TreeTuner/Tutorial/TreeTuner_file_examples/Step10_building_preliminary_tree/
 1. [MAFFT v7](https://mafft.cbrc.jp/alignment/software/) 
 2. [BMGE v1.12](https://bio.tools/bmge) 
 3. [trimAl v1.4](http://trimal.cgenomics.org)
 4. [FastTree v2.1](http://www.microbesonline.org/fasttree/)
 5. [IQ-TREE v1.6.12](http://www.iqtree.org)
 
-`Color the Newick Tree`:
+`Step 11: Coarse-tuning pipeline`
+> cd /Your/Directory/Path/TreeTuner/Tutorial/TreeTuner_file_examples/Step11-14_coarse_tuning/
+1. [Ruby v2.5.1 and BioRuby v2.0.3](https://www.ruby-lang.org/en/downloads/)
+2. [acc2tax](https://github.com/richardmleggett/acc2tax) 
+3. [NCBI taxonomy database](https://ftp.ncbi.nih.gov/pub/taxonomy/)
+4. [TreeTrimmer](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step11-14_coarse_tuning)
+
+`Step 12-14: Color the Newick Tree`
+> cd /Your/Directory/Path/TreeTuner/Tutorial/TreeTuner_file_examples/Step11-14_coarse_tuning/color_tree/
 1. [python3](https://www.python.org/downloads/)
 2. [ETE3 toolkit](http://etetoolkit.org/download/)
 3. [color_coarse_tuning_tree.py](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step11-14_coarse_tuning/color_tree)
-4. [color_fine_tuning_tree.py](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/color_tree)
+
+`Step 15-16: Renaming the protein ID`
+> cd /Your/Directory/Path/TreeTuner/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/rename/
+1. [python3](https://www.python.org/downloads/)
+2. [rename_ncbi_blastdb.py](https://github.com/zx0223winner/TreeTuner/blob/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/rename/rename_ncbi_blastdb.py)
+
+` Step 18-21: Fine-tuning pipeline`
+> cd /Your/Directory/Path/TreeTuner/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/Laura_perl/
+1. [Perl 5 and BioPerl](https://www.perl.org/get.html)
+2. [Python 3](https://www.python.org/downloads/)
+3. [rm_inparal_rank.pl, trim2untrim.pl, lauralib.pm](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/Laura_perl)
+4. [rename_ncbi_blastdb.py](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/rename)
+
+`Step 22-24: Color the Newick Tree`
+> cd /Your/Directory/Path/TreeTuner/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/color_tree/
+1. [python3](https://www.python.org/downloads/)
+2. [ETE3 toolkit](http://etetoolkit.org/download/)
+3. [color_fine_tuning_tree.py](https://github.com/zx0223winner/TreeTuner/tree/main/Tutorial/TreeTuner_file_examples/Step15-24_fine_tuning/color_tree)
 
 ### 3. Instructions for adjusting parameters in Coarse- and fine-tuning pipeline
 

@@ -32,8 +32,22 @@ Usage: python3 color_fine_tuning_tree.py <newick_tree_file>
 ### 2. Computational Requirement
 TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to run their BLAST searches (Altschul et al., 1997). The MAFFT v7(Katoh and Standley, 2013), BMGE v1.12 (Criscuolo and Gribaldo, 2010), trimAl v1.4 (Capella-Gutiérrez et al., 2009), FastTree v2.1 (Price et al., 2010) and IQ-TREE v1.6.12 (Nguyen et al., 2015)
 
+#### 2.1 Create an environemnt from Conda YAML file
 
-#### 2.1 Dependencies, package/script versions and directory paths
+To install all required dependencies, we provided a conda environment definition file [TreeTuneENV.yaml](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTuneENV.yaml) with all the dependencies. The Perl, Ruby, Python, Shell scripts have been pre-storaged in the respective directory folders. 
+
+1. You need to have the [Conda to be installed on your system]( https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). For example, to install Anaconda on Linux, run:
+>bash Anaconda-latest-Linux-x86_64.sh
+
+2. Run the following command to create an environemnt from [Conda YAML file](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTuneENV.yaml)
+
+>conda env create --file TreeTuneENV.yaml
+
+3. After downloading a long list of required dependencies. Activate the Conda environemnt and follow the pipeine to run respective packages/custom scripts.
+
+>conda activate TreeTuneENV
+
+#### 2.2 Dependencies, package/script versions and directory paths
 
 `Step 1-9: Preparing the BLAST results`
 > cd /Your/Directory/Path/TreeTuner/Tutorial/TreeTuner_file_examples/Step1-9_preparing_input_files/

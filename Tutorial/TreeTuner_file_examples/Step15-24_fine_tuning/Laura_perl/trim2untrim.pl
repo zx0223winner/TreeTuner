@@ -5,11 +5,8 @@
 # Author: Laura Eme
 ###################################################################################
 
-#use lib '/paste/your/directory/Laura_perl';
-# change the lib directory to where contain "lauralib.pm" perl module
-#use lauralib;
-use FindBin qw($Bin);
-use lib "$Bin/../lauralib.pm";
+#use FindBin qw($Bin);
+#use lib "$Bin/";
 use Bio::SeqIO::fasta; 
 
 $USAGE = "\n trim2untrim.pl [trimmed alignement] [untrimmed alignment]\n\nWill remove sequences from the untrimmed alignement based on sequences present in the trimmed alignement\n\n" ;

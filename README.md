@@ -1,3 +1,5 @@
+[![run with conda](http://img.shields.io/badge/run%20with-conda-3EB049?labelColor=000000&logo=anaconda)](https://docs.conda.io/en/latest/)
+
 # TreeTuner
 A pipeline to coarse and fine-tuning large phylogenetic datasets via minimizing the redundancy and complexity
 <img src="https://github.com/zx0223winner/TreeTuner/blob/main/TreeTuner_workflow.jpg" alt="TreeTuner" width="3200px" height="">

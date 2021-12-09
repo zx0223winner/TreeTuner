@@ -6,10 +6,8 @@
 ###################################################################################
 
 use FindBin;
-use lib "$FindBin::Bin/../lauralib";
-#use lib '/paste/your/directory/Laura_perl';
-# change the lib directory to where contain "lauralib.pm" perl module
-#use lauralib;
+use lib "$FindBin::Bin/";
+use lauralib;
 use Bio::TreeIO;
 use Bio::SearchIO; 
 use Bio::SeqIO::fasta; 
@@ -30,8 +28,8 @@ $stat = Statistics::Descriptive::Full->new();
 $intree = $ARGV[0];
 $inalign = $ARGV[1];
 $cutoff = $ARGV[2];
-@taxa_list = read_file($ARGV[3]);
-@rank_file = read_file($ARGV[4]);
+@taxa_list = lauralib::read_file($ARGV[3]);
+@rank_file = lauralib::read_file($ARGV[4]);
 $deletedTaxa = $inalign."_removedSeq";
 
 print " ------- Tree ongoing: ",$intree," -------\n";
@@ -231,7 +229,7 @@ while ($nb_removed > 0){
 	if($nb_removed > 0){
 
 		##### Reconstruction of the tree ######
-		$commande = "/paste/your/directory/Laura_perl/FastTree ".$out_align." > ".$inalign.".fasttree";
+		$commande = "$FindBin::Bin/FastTree ".$out_align." > ".$inalign.".fasttree";
 		#$commande = "/home/leme/bin/FastTree ".$out_align." > ".$inalign.".fasttree";
 		# change the lib directory to where contain FastTree.c
 		print "\n\nTree reconstruction : \n",$commande,"\n";

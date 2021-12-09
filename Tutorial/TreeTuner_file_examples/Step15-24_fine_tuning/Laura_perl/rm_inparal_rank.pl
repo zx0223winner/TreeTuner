@@ -5,9 +5,11 @@
 # Author: Laura Eme
 ###################################################################################
 
-use lib '/paste/your/directory/Laura_perl';
+use FindBin;
+use lib "$FindBin::Bin/../lauralib";
+#use lib '/paste/your/directory/Laura_perl';
 # change the lib directory to where contain "lauralib.pm" perl module
-use lauralib;
+#use lauralib;
 use Bio::TreeIO;
 use Bio::SearchIO; 
 use Bio::SeqIO::fasta; 

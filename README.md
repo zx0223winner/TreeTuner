@@ -37,15 +37,22 @@ TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to
 To install all required dependencies, we provided a conda environment definition file [TreeTuneENV.yaml](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTuneENV.yaml) with all the dependencies. The Perl, Ruby, Python, Shell scripts have been pre-storaged in the respective directory folders. 
 
 1. You need to have the [Conda to be installed on your system]( https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). For example, to install Anaconda on Linux, run:
->bash Anaconda-latest-Linux-x86_64.sh
+
+```unix
+bash Anaconda-latest-Linux-x86_64.sh
+```
 
 2. Run the following command to create an environemnt from [Conda YAML file](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTuneENV.yaml)
 
->conda env create --file TreeTuneENV.yaml
+```
+conda env create --file TreeTuneENV.yaml
+```
 
 3. After downloading a long list of required dependencies. Activate the Conda environemnt and follow the pipeine to run respective packages/custom scripts.
 
->conda activate TreeTuneENV
+```
+conda activate TreeTuneENV
+```
 
 #### 2.2 Dependencies, package/script versions and directory paths
 

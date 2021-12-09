@@ -1,3 +1,4 @@
+package lauralib;
 sub pfam_acc{
 
 #### input: $nom_du_domaine, $banque_de_profils_hmm; output: identifiant Pfam ####
@@ -15,7 +16,7 @@ sub pfam_acc{
     my($pfam_acc) = "";
     my($test) = "";
     
-    # RÈcupÈration du profil hmm du domaine
+    # R√©cup√©ration du profil hmm du domaine
     $shell_hmmfetch = "hmmfetch ".$banque_hmm." ".$nom_dom." > ".$nom_dom.".hmm";
 
     $nom_hmm = $nom_dom.".hmm";
@@ -26,7 +27,7 @@ sub pfam_acc{
     }
 
 
-    # RÈcupÈration du numÈro d'acces pfam dans la fiche .hmm
+    # R√©cup√©ration du num√©ro d'acces pfam dans la fiche .hmm
     $hmm_dir = $nom_dom.".hmm";
 
     # Parcours du .hmm
@@ -86,7 +87,7 @@ sub prt_to_dom
 
 	my($prt_file, $hmm_bank, $dom_file) = @_;
 	
-# On rÈdige la requete	
+# On r√©dige la requete	
 	$shell_hmmpfam = "hmmpfam ".$hmm_bank." ".$prt_file." > ".$dom_file;
 	print $shell_hmmpfam."\n";
 		
@@ -121,19 +122,19 @@ sub dom_to_list
 	    }
 	    
 	
-	    # Si la ligne est celle qui prÈcËde la 1e zone de domaines, on active le switch1
+	    # Si la ligne est celle qui pr√©c√®de la 1e zone de domaines, on active le switch1
 	    if( $ligne =~ /\ ---\n$/ ){
 		$switch1 = 1;
 	    }
-	    # Si le switch1 est ON et qu'on arrive ‡ la fin du tableau des domaines (ligne vide)
+	    # Si le switch1 est ON et qu'on arrive √† la fin du tableau des domaines (ligne vide)
 	    elsif(( $ligne =~ /^\n$/ )&&( $switch1 == 1)){
 		$switch1 = 0;
 	    }
-	    # Si la ligne est celle qui prÈcËde la 2e zone de domaines, on active le switch2
+	    # Si la ligne est celle qui pr√©c√®de la 2e zone de domaines, on active le switch2
 	    elsif( $ligne =~ /\ -------\n$/ ){
 		$switch2 = 1;
 	    }
-	    # Si le switch2 est ON et qu'on arrive ‡ la fin du tableau des domaines (ligne vide)
+	    # Si le switch2 est ON et qu'on arrive √† la fin du tableau des domaines (ligne vide)
 	    elsif(( $ligne =~ /^\n$/ )&&( $switch2 == 1)){
 		$switch2 = 0;
 		$ligne_dom = $#dom_data;
@@ -147,10 +148,10 @@ sub dom_to_list
 	    $ligne1 = $_;
 	    chomp($ligne1);
 	    
-	    # on sÈpare les colonnes (qui sont sÈparÈes par au moins 1 espace)
+	    # on s√©pare les colonnes (qui sont s√©par√©es par au moins 1 espace)
 	    @tab_ligne1 = split(/ {1,}/,$ligne1);
 	    
-	    #on rÈcupere le nom du domaine
+	    #on r√©cupere le nom du domaine
 	    $nom_dom1 = $tab_ligne1[0];
 	    
 	    # on recupere la description du domaine
@@ -161,7 +162,7 @@ sub dom_to_list
 		$desc = $desc.$tab_ligne1[$i_tab_ligne1]." ";
 	    }
 	
-	    # on recupere la evalue (incluant tous les domaines) associÈ au domaine
+	    # on recupere la evalue (incluant tous les domaines) associ√© au domaine
 	    $evalue1= $tab_ligne1[$#tab_ligne1-1];
 	
 	    # si la evalue est inferieure au seuil dans le 1e tableau
@@ -172,17 +173,17 @@ sub dom_to_list
 		    $ligne2 = $tab_dom2[$j];
 		    chomp($ligne2);
 	
-		    # on sÈpare les colonnes (qui sont sÈparÈes par au moins 2 espaces)
+		    # on s√©pare les colonnes (qui sont s√©par√©es par au moins 2 espaces)
 		    @tab_ligne2 = split(/ +/,$ligne2);
 		    
 		    # on recupere le nom du domaine 
 		    $nom_dom2 = $tab_ligne2[0];
 	
-		    # on recupere la evalue (incluant tous les domaines) associÈ au domaine
+		    # on recupere la evalue (incluant tous les domaines) associ√© au domaine
 		    $evalue2= $tab_ligne2[$#tab_ligne2];
 	
 		    if(( $evalue2 <= $threshold ) && ( $nom_dom1 =~ /^$nom_dom2$/ )){
-				# position de dÈbut
+				# position de d√©but
 				$pos_i = $tab_ligne2[2];
 				# position de fin
 				$pos_f = $tab_ligne2[3];
@@ -201,7 +202,7 @@ sub dom_name2hmm{
 
 	my($nom_dom, $banque_hmm, $dir_hmm) = @_;
 
-	# RÈcupÈration du profil hmm du domaine
+	# R√©cup√©ration du profil hmm du domaine
 	$shell_hmmfetch = "hmmfetch ".$banque_hmm." ".$nom_dom." > ".$dir_hmm;
 	print $shell_hmmfetch."\n";
 
@@ -244,27 +245,27 @@ sub hmms2pro{
 	@tab_id = ();
 	@tab_eval = ();
 	
-	### RÈcupÈration du contenu des deux tableaux du .hmms ###
+	### R√©cup√©ration du contenu des deux tableaux du .hmms ###
 	foreach (@fic_hmms){
 	    
 	    ### stockage des infos dans des tableaux    
-	    if(($switch==1)&&($_ =~ /[a-zA-Z0-9]/)){         # on dÈtecte le premier tableau du .hmms 
+	    if(($switch==1)&&($_ =~ /[a-zA-Z0-9]/)){         # on d√©tecte le premier tableau du .hmms 
 		chomp($_);
-	    	@tmp = split(/\ +/,$_);			# on sÈpare selon les espaces
+	    	@tmp = split(/\ +/,$_);			# on s√©pare selon les espaces
 
 		push(@tab_id, $tmp[0]);                        # on stocke l'identifiant
 		push(@tab_eval, $tmp[$#tmp-1]);		      # on stocke la e-value
 
 	    }
 
-	    # variable qui sert ‡ marquer le dÈbut et la fin des 2 tableaux contenus dans le .dom
-	    if($_ =~ / ------- ---$/)         # dÈtection de la ligne qui prÈcËde le 1e tableau
+	    # variable qui sert √† marquer le d√©but et la fin des 2 tableaux contenus dans le .dom
+	    if($_ =~ / ------- ---$/)         # d√©tection de la ligne qui pr√©c√®de le 1e tableau
 	    {
 		$switch = 1;
-	    }elsif($_ =~ / -----  -------$/) # dÈtection de la ligne qui prÈcËde le 2e tableau
+	    }elsif($_ =~ / -----  -------$/) # d√©tection de la ligne qui pr√©c√®de le 2e tableau
 	    {
 		$switch = 2;
-	    }elsif($_ =~ /^\n$/)      # dÈtection du \n qui marque la fin du tableau
+	    }elsif($_ =~ /^\n$/)      # d√©tection du \n qui marque la fin du tableau
 	    {
 		$switch = 0;
 	    }# fin if
@@ -272,18 +273,18 @@ sub hmms2pro{
 	}
 	
 
-	# RÈcupÈration du numÈro d'acces
+	# R√©cup√©ration du num√©ro d'acces
 	for($i=0; $i<=$#tab_id; $i++){
-	    @tmp = split(/\|/,$tab_id[$i]);		# on sÈpare selon les "pipes"
+	    @tmp = split(/\|/,$tab_id[$i]);		# on s√©pare selon les "pipes"
 	    $tab_id[$i] = @tmp[1];
 	}
 
-	######## CrÈation du _pro en fonction du seuil ########
+	######## Cr√©ation du _pro en fonction du seuil ########
 	open(fic_pro, ">$dir_pro") || die("Error: cannot write _pro file $dir_pro!");
 	
 	for($i=0; $i<=$#tab_eval; $i++){ 		# on parcourt les e-value
 
-	    if ( ($tab_eval[$i] <= $threshold2) && ($tab_eval[$1] =~ /\d/) ){ # On s'assure qu'il s'agit d'une valeur numÈrique (et non "No hits above threshold")
+	    if ( ($tab_eval[$i] <= $threshold2) && ($tab_eval[$1] =~ /\d/) ){ # On s'assure qu'il s'agit d'une valeur num√©rique (et non "No hits above threshold")
 	
 		print "Evalue du tableau: ".$tab_eval[$i]."\tEvalue seuil: ".$threshold2."\n";
 	
@@ -298,7 +299,7 @@ sub hmms2pro{
 
 ##########################################################################################
 
-# A partir d'une sÈrie de fichiers _pro, crÈÈ un fichier unique contenant les numÈros d'acces une et une seule fois
+# A partir d'une s√©rie de fichiers _pro, cr√©√© un fichier unique contenant les num√©ros d'acces une et une seule fois
 
 sub pro2uniq{
 
@@ -314,7 +315,7 @@ sub pro2uniq{
 			
 			chomp($num_fic_tab_pro);
 	
-			# variable qui sert ‡ tester si on doit ajouter le numÈro d'acces ‡ la liste des numÈros uniques
+			# variable qui sert √† tester si on doit ajouter le num√©ro d'acces √† la liste des num√©ros uniques
 			$sw_deja_present = 0;
 			
 			# on parcourt le tableau des domaines uniques
@@ -329,7 +330,7 @@ sub pro2uniq{
 				}
 			}	
 
-			# Qd on a fini de parcourir le tableau des numÈro d'acces uniques, si le switch est tjs ‡ zÈro, on ajoute le num d'acces
+			# Qd on a fini de parcourir le tableau des num√©ro d'acces uniques, si le switch est tjs √† z√©ro, on ajoute le num d'acces
 			if( $sw_deja_present == 0){
 				push( @tab_uniq, $num_fic_tab_pro );
 			}
@@ -353,7 +354,7 @@ sub pro2classif{
 
 	my($dir_classif, $dir_taxo, @data_pro) = @_;
 
-	# RÈcupÈration de la taxo de rÈfÈrence
+	# R√©cup√©ration de la taxo de r√©f√©rence
 	@tab_taxo_ref = read_file($dir_taxo);
 
 	for $i( 0 .. $#tab_taxo_ref){
@@ -371,7 +372,7 @@ sub pro2classif{
 
 		chomp($num_pro);
 
-		# si la ligne contient bien un numÈro d'acces
+		# si la ligne contient bien un num√©ro d'acces
 		if($num_pro =~ /\d/){
 
 			$nb_pro_traites++;
@@ -454,13 +455,13 @@ sub classif2compt{
 
 print $fic_classif."\n";
 	
-	# on rÈcupËre les infos du fichier .classif
+	# on r√©cup√®re les infos du fichier .classif
 	@data_classif = read_file( $fic_classif );
 	
-	# RÈcupÈration de la taxo de rÈfÈrence
+	# R√©cup√©ration de la taxo de r√©f√©rence
 	@tab_taxo_ref = read_file($dir_taxo);
 
-	# on crÈÈ le fichier contenant les compteurs associÈs ‡ chaque groupe taxonomique
+	# on cr√©√© le fichier contenant les compteurs associ√©s √† chaque groupe taxonomique
 	open(FIC_COMPT, ">$dir_classif_compt")||die("Error: cannot write $dir_classif_compt from classif2compt module!");
 
 	for $i( 0 .. $#tab_taxo_ref){
@@ -470,7 +471,7 @@ print $fic_classif."\n";
 
 		print FIC_COMPT $ligne_taxo_ref;
 		
-		# pour ce groupe taxonomique on initialise le compteur ‡ zÈro
+		# pour ce groupe taxonomique on initialise le compteur √† z√©ro
 		$compteur_taxo = 0;
 		$sw_classif_trouve = 0;
 	
@@ -576,18 +577,18 @@ sub taxo2ref{
 
 	@data_taxo_complete = read_file($dir_taxo_complete);
 
-	# on parcourt le fichier contenant la classif complete associÈe ‡ chaque numÈro d'acces
+	# on parcourt le fichier contenant la classif complete associ√©e √† chaque num√©ro d'acces
 	foreach $ligne_taxo_complete (@data_taxo_complete){
 	
 		chomp( $ligne_taxo_complete );
 	
-		# Test de dÈtection de la classif
+		# Test de d√©tection de la classif
 		$sw_classif_trouve = 0;
 		
-		# on sÈpare selon les tabulations	
+		# on s√©pare selon les tabulations	
 		@tab_ligne_taxo_complete = split( /\t/, $ligne_taxo_complete );
 		
-		# on rÈcupËre le numÈro d'acces
+		# on r√©cup√®re le num√©ro d'acces
 		$id = $tab_ligne_taxo_complete[0];
 		
 		for $i ( 1 .. $#tab_ligne_taxo_complete ){
@@ -600,11 +601,11 @@ sub taxo2ref{
 
 ##########################################################################################
 
-# Calcule le nombre moyen de domaines trouvÈs, ‡ partir d'une liste de fichiers .dom et de la e-value seuil
+# Calcule le nombre moyen de domaines trouv√©s, √† partir d'une liste de fichiers .dom et de la e-value seuil
 
 sub dom2nombre {
 
-	# RÈcupÈration de la e-value seuil, et du tableau contenant les chemins des fichiers .dom ‡ moyenner
+	# R√©cup√©ration de la e-value seuil, et du tableau contenant les chemins des fichiers .dom √† moyenner
 	my( $threshold, @dir_dom ) = @_;
 	
 	# initialisaton des variables
@@ -617,7 +618,7 @@ sub dom2nombre {
 	
 		@data_fic_dom = read_file( $fic_dom );
 
-		# RÈcupÈration du tableau contenant tous les domaines en dessous du seuil de evalue
+		# R√©cup√©ration du tableau contenant tous les domaines en dessous du seuil de evalue
 		@tab_dom_ok = dom_to_list( $threshold, @data_fic_dom );
 
 		$nombre_dom = @tab_dom_ok;
@@ -630,7 +631,7 @@ sub dom2nombre {
 		push(@tab_nb_dom, $nombre_dom);
 	}
 
-	# on initialise la hash table qui contiendra dans la 1e valeur le nombre de protÈines qui n'ont aucun domaine, puis dans la 2e valeur le nb de celles qui en ont un, etc..
+	# on initialise la hash table qui contiendra dans la 1e valeur le nombre de prot√©ines qui n'ont aucun domaine, puis dans la 2e valeur le nb de celles qui en ont un, etc..
 	my( %nb_prot_nb_dom ) = ();
 
 	$nb_total = 0;
@@ -693,7 +694,7 @@ sub nb_par_dom{
 		
 		@data_fic_dom = read_file( $fic_dom );
 		
-		# RÈcupÈration du tableau contenant tous les domaines en dessous du seuil de evalue
+		# R√©cup√©ration du tableau contenant tous les domaines en dessous du seuil de evalue
 		@tab_dom_ok = dom_to_list( $threshold, @data_fic_dom );
 		
 		for $i ( 0 .. $#tab_dom_ok ){	
@@ -790,17 +791,17 @@ sub prot_par_dom{
 	my( @data_fic_dom ) = ();
 	my( @tab_dom_ok ) = ();
 
-	### Tableau qui recense les domaines uniques pour UNE sÈquence
+	### Tableau qui recense les domaines uniques pour UNE s√©quence
 	my( @tab_dom_uniq_local ) = ();
 
-	### Tableau qui cumule les domaines uniques de chaque sÈquences les uns ‡ la suite des autres (le meme domaine peut donc etre prÈsent plusieurs fois)
+	### Tableau qui cumule les domaines uniques de chaque s√©quences les uns √† la suite des autres (le meme domaine peut donc etre pr√©sent plusieurs fois)
 	my( @tab_dom_uniq_par_seq ) = ();
 
 	foreach $fic_dom (@dir_dom){
 		
 		@data_fic_dom = read_file( $fic_dom );
 		
-		# RÈcupÈration du tableau contenant tous les domaines en dessous du seuil de evalue
+		# R√©cup√©ration du tableau contenant tous les domaines en dessous du seuil de evalue
 		@tab_dom_ok = dom_to_list( $threshold, @data_fic_dom );
 
 		@tab_dom_uniq_local = ();
@@ -829,7 +830,7 @@ sub prot_par_dom{
 	}
 
 
-	### Creation du tableau avec la liste des domaines uniques pour l'ensemble des sÈquences	
+	### Creation du tableau avec la liste des domaines uniques pour l'ensemble des s√©quences	
 	my( @tab_dom_uniq ) = ();
 
 	for $k ( 0 .. $#tab_dom_uniq_par_seq ){
@@ -853,7 +854,7 @@ sub prot_par_dom{
 
 
 
-	### Creation d'un tableau qui recense pour chaque domaine, dans combien de protÈines diffÈrentes on le trouve
+	### Creation d'un tableau qui recense pour chaque domaine, dans combien de prot√©ines diff√©rentes on le trouve
 
 	my( @tab_compt ) = ();
 
@@ -920,12 +921,12 @@ sub dom2nombre_diff{
 	my( @compt_dom_diff) = ();
 	my( $max_nb_diff ) = 0;
 
-	### crÈation d'une liste contenant le nombre de domaines diffÈrent pour chaque sÈquence
+	### cr√©ation d'une liste contenant le nombre de domaines diff√©rent pour chaque s√©quence
 	foreach $fic_dom (@dir_dom){
 		
 		@data_fic_dom = read_file( $fic_dom );
 		
-		# RÈcupÈration du tableau contenant tous les domaines en dessous du seuil de evalue
+		# R√©cup√©ration du tableau contenant tous les domaines en dessous du seuil de evalue
 		@tab_dom_ok = dom_to_list( $threshold, @data_fic_dom );
 
 		my(@tab_dom_uniq_local) = ();
@@ -959,7 +960,7 @@ sub dom2nombre_diff{
 	}
 
 
-	### CrÈation d'un tableau recensant le nombre de protÈines en fonction du nb de domaines diffÈrents qui les composent
+	### Cr√©ation d'un tableau recensant le nombre de prot√©ines en fonction du nb de domaines diff√©rents qui les composent
 		
 	my( @tab_nb_prot ) = ();
 	
@@ -992,12 +993,12 @@ sub dom_mat2cons{
 
 		$nom_fic = substr($fic_dom_mat, 0, -8);
 
-		## rÈcupÈration du contenu du fichier .dom_mat
+		## r√©cup√©ration du contenu du fichier .dom_mat
 		@data_fic_dom_mat = read_file( $fic_dom_mat );
 
 		@mat_fic = ();
 		
-		## on rÈcupËre la matrice sans les entetes
+		## on r√©cup√®re la matrice sans les entetes
 		for $i ( 1 .. $#data_fic_dom_mat ){
 
 			$ligne = $data_fic_dom_mat[$i];	
@@ -1015,7 +1016,7 @@ sub dom_mat2cons{
 		}
 
 
-		## on teste si on trouve un zÈro dans la matrice ==> dans ce cas ts les domaines ne sont pas conservÈs chez tout le monde		
+		## on teste si on trouve un z√©ro dans la matrice ==> dans ce cas ts les domaines ne sont pas conserv√©s chez tout le monde		
 	
 		$sw_present_chez_tlm = 0;
 
@@ -1031,7 +1032,7 @@ sub dom_mat2cons{
 		}
 
 
-		## si on a pas trouvÈ de zÈro, on met le nom du fichier, ainsi que le nb de domaines qui le composent, dans une liste
+		## si on a pas trouv√© de z√©ro, on met le nom du fichier, ainsi que le nb de domaines qui le composent, dans une liste
 		if ( $sw_present_chez_tlm == 0 ){
 
 			$nb_domaines = @ligne_mat_fic;
@@ -1055,12 +1056,12 @@ sub dom_mat2nb_cons{
 
 		$nom_fic = substr($fic_dom_mat, 0, -8);
 
-		## rÈcupÈration du contenu du fichier .dom_mat
+		## r√©cup√©ration du contenu du fichier .dom_mat
 		@data_fic_dom_mat = read_file( $fic_dom_mat );
 
 		@mat_fic = ();
 		
-		## on rÈcupËre la matrice sans les entetes
+		## on r√©cup√®re la matrice sans les entetes
 		for $i ( 1 .. $#data_fic_dom_mat ){
 
 			$ligne = $data_fic_dom_mat[$i];	
@@ -1078,7 +1079,7 @@ sub dom_mat2nb_cons{
 		}
 
 
-		## on teste si on trouve un zÈro dans la matrice ==> dans ce cas ts les domaines ne sont pas conservÈs chez tout le monde		
+		## on teste si on trouve un z√©ro dans la matrice ==> dans ce cas ts les domaines ne sont pas conserv√©s chez tout le monde		
 	
 		$sw_present_chez_tlm = 0;
 
@@ -1094,7 +1095,7 @@ sub dom_mat2nb_cons{
 		}
 
 
-		## si on a pas trouvÈ de zÈro, on met le nom du fichier, ainsi que le nb de domaines qui le composent, dans une liste
+		## si on a pas trouv√© de z√©ro, on met le nom du fichier, ainsi que le nb de domaines qui le composent, dans une liste
 		if ( $sw_present_chez_tlm == 0 ){
 
 			$nb_domaines = @ligne_mat_fic;
@@ -1112,12 +1113,12 @@ sub dom_mat2standard{
 
 	my( $fic_taxa_ref , @dir_dom_mat ) = @_;
 
-	# rÈcupÈration de la taxonomie de rÈfÈrence
+	# r√©cup√©ration de la taxonomie de r√©f√©rence
 	
 
 	foreach $fic_dir_dom ( @dir_dom_mat ){
 	
-		# rÈcupÈration du contenu du fichier .dom_mat
+		# r√©cup√©ration du contenu du fichier .dom_mat
 		@data_fic_dir_dom = read_file( $fic_dir_dom );
 
 		foreach $ligne_data_fic_dir_dom (@data_fic_dir_dom){
@@ -1129,7 +1130,7 @@ sub dom_mat2standard{
 
 ##########################################################################################
 
-### Transforme un tableau en un tableau ‡ deux dimensions en effectuant un split de chaque ligne sur l'expression rÈguliËre donnÈe en paramËtre
+### Transforme un tableau en un tableau √† deux dimensions en effectuant un split de chaque ligne sur l'expression r√©guli√®re donn√©e en param√®tre
 
 sub split_exreg {
 

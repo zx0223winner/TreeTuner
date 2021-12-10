@@ -30,7 +30,7 @@ Usage: python3 color_fine_tuning_tree.py <newick_tree_file>
 ```
 
 ### 2. Computational Requirement
-TreeTuner users will also need the Linux environment (e.g., Ubuntu 20.04 LTS) to run their BLAST searches (Altschul et al., 1997). The MAFFT v7(Katoh and Standley, 2013), BMGE v1.12 (Criscuolo and Gribaldo, 2010), trimAl v1.4 (Capella-Gutiérrez et al., 2009), FastTree v2.1 (Price et al., 2010) and IQ-TREE v1.6.12 (Nguyen et al., 2015)
+TreeTuner users can either follow the Star Protocol pipeline to install the required packages or use the Conda environment file to deploy the pipeline. 
 
 #### 2.1 Create an environemnt from Conda YAML file
 
@@ -55,6 +55,7 @@ conda activate TreeTuneENV
 ```
 
 #### 2.2 Dependencies, package/script versions and directory paths
+For example, Linux environment (e.g., Ubuntu 20.04 LTS) to run their BLAST searches (Altschul et al., 1997); MAFFT v7(Katoh and Standley, 2013), BMGE v1.12 (Criscuolo and Gribaldo, 2010), trimAl v1.4 (Capella-Gutiérrez et al., 2009), FastTree v2.1 (Price et al., 2010) and IQ-TREE v1.6.12 (Nguyen et al., 2015)
 
 `Step 1-9: Preparing the BLAST results`
 > cd /Your/Directory/Path/TreeTuner/Tutorial/TreeTuner_file_examples/Step1-9_preparing_input_files/

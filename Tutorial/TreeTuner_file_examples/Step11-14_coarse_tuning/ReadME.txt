@@ -2,7 +2,7 @@ This is the readme file for TreeTrimmer.
 
 TreeTrimmer, a bioinformatics procedure that removes unnecessary redundancy in large phylogenetic datasets, reducing the size effect on more rigorous downstream analyses. The method identifies and removes user-defined ‘redundant’ sequences, e.g., orthologous sequences from closely related organisms and ‘recently’ evolved lineage-specific paralogs. Representative OTUs are retained for more rigorous re-analysis.
 
-To run this script you will need a working installation of Ruby (www.ruby-lang.org; tested with v1.8.7) and BioRuby (www.bioruby.org; tested with v1.3.0).
+To run this script you will need a working installation of Ruby (www.ruby-lang.org; tested with v2.5.1) and BioRuby (www.bioruby.org; tested with v2.0.3).
 
 Type " ruby treetrimmer.rb " to see the usage. A typical command might look like: " ruby treetrimmer.rb [Newick_tree_file] [Parameter_input_file] [Taxonomic_information_file (option)] > output_file".
 

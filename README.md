@@ -39,7 +39,7 @@ To install all required dependencies, we provided a conda environment definition
 1. You need to have the [Conda to be installed on your system]( https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). For example, to [install Anaconda on Linux](https://www.anaconda.com/products/individual), run:
 
 ```unix
-bash Anaconda-latest-Linux-x86_64.sh
+bash Anaconda3-2021.11-Linux-x86_64.sh
 ```
 
 2. Run the following command to create an environemnt from [Conda YAML file](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTuneENV.yaml)

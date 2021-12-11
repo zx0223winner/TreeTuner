@@ -34,7 +34,7 @@ TreeTuner users can either follow the Star Protocol pipeline to install the requ
 
 #### 2.1 Create an environemnt from Conda YAML file
 
-To install all required dependencies, we provided a conda environment definition file [TreeTuneENV.yaml](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTuneENV.yaml) with all the dependencies. The Perl, Ruby, Python, Shell scripts have been pre-storaged in the respective directory folders. 
+To install all required dependencies, we provided a conda environment definition file [TreeTunerENV.yaml](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTunerENV.yaml) with all the dependencies. The Perl, Ruby, Python, Shell scripts have been pre-storaged in the respective directory folders. 
 
 1. You need to have the [Conda to be installed on your system]( https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). For example, to [install Anaconda on Linux](https://www.anaconda.com/products/individual), run:
 
@@ -42,17 +42,23 @@ To install all required dependencies, we provided a conda environment definition
 bash Anaconda3-2021.11-Linux-x86_64.sh
 ```
 
-2. Run the following command to create an environemnt from [Conda YAML file](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTuneENV.yaml)
+2. Run the following command to create an environemnt from [Conda YAML file](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTunerENV.yaml)
 
 ```
 source ~/.bashrc
-conda env create --file TreeTuneENV.yaml
+conda env create --file TreeTunerENV.yaml
 ```
 
 3. After downloading a long list of required dependencies. Activate the Conda environemnt and follow the pipeine to run respective packages/custom scripts.
 
 ```
-conda activate TreeTuneENV
+# To activate this environment, use
+#
+#     $ conda activate TreeTuner
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
 ```
 
 #### 2.2 Dependencies, package/script versions and directory paths

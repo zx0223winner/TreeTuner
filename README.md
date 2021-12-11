@@ -34,13 +34,9 @@ TreeTuner users can either follow the Star Protocol pipeline to install the requ
 
 #### 2.1 Create an environemnt from Conda YAML file
 
-To install all required dependencies, we provided a conda environment definition file [TreeTunerENV.yaml](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTunerENV.yaml) with all the dependencies. The Perl, Ruby, Python, Shell scripts have been pre-storaged in the respective directory folders. 
+To install all required dependencies, we provided a conda environment definition file (tested on the MacOSX system)[TreeTunerENV.yaml](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTunerENV.yaml) with all the dependencies. The Perl, Ruby, Python, Shell scripts have been pre-storaged in the respective directory folders. 
 
-1. You need to have the [Conda to be installed on your system]( https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). For example, to [install Anaconda on Linux](https://www.anaconda.com/products/individual), run:
-
-```unix
-bash Anaconda3-2021.11-Linux-x86_64.sh
-```
+1. You need to have the [Conda to be installed on your system]( https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). For example, to [install Anaconda on MacOSX](https://www.anaconda.com/products/individual), Double-click the Anaconda3-2021.11-MacOSX-x86_64.pkg file.
 
 2. Run the following command to create an environemnt from [Conda YAML file](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTunerENV.yaml)
 

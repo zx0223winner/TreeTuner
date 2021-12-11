@@ -32,6 +32,7 @@ dependencies:
   - harfbuzz=1.8.8=hb8d4a28_0
   - icu=58.2=h0a44026_3
   - intel-openmp=2021.4.0=hecd8cb5_3538
+  - iqtree=1.5.5=he390d98_0
   - jpeg=9d=h9ed2024_0
   - krb5=1.19.2=hcd88c3b_0
   - libcurl=7.78.0=hb8e4fae_0

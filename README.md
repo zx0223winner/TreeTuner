@@ -36,7 +36,7 @@ TreeTuner users can either follow the Star Protocol pipeline to install the requ
 
 To install all required dependencies, we provided a conda environment definition file [TreeTuneENV.yaml](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTuneENV.yaml) with all the dependencies. The Perl, Ruby, Python, Shell scripts have been pre-storaged in the respective directory folders. 
 
-1. You need to have the [Conda to be installed on your system]( https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). For example, to install Anaconda on Linux, run:
+1. You need to have the [Conda to be installed on your system]( https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). For example, to [install Anaconda on Linux](https://www.anaconda.com/products/individual), run:
 
 ```unix
 bash Anaconda-latest-Linux-x86_64.sh

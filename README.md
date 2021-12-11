@@ -45,8 +45,8 @@ bash Anaconda3-2021.11-Linux-x86_64.sh
 2. Run the following command to create an environemnt from [Conda YAML file](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTuneENV.yaml)
 
 ```
-conda env create --file TreeTuneENV.yaml
 source ~/.bashrc
+conda env create --file TreeTuneENV.yaml
 ```
 
 3. After downloading a long list of required dependencies. Activate the Conda environemnt and follow the pipeine to run respective packages/custom scripts.

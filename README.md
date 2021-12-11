@@ -36,7 +36,7 @@ TreeTuner users can either follow the Star Protocol pipeline to install the requ
 
 To install all required dependencies, we provided a conda environment definition file (tested on the MacOSX system)[TreeTunerENV.yaml](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTunerENV.yaml) with all the dependencies. The Perl, Ruby, Python, Shell scripts have been pre-storaged in the respective directory folders. 
 
-1. You need to have the [Conda to be installed on your system]( https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). For example, to [install Anaconda on MacOSX](https://www.anaconda.com/products/individual), Double-click the Anaconda3-2021.11-MacOSX-x86_64.pkg file.
+1. You need to have the [Conda to be installed on your system]( https://docs.conda.io/projects/conda/en/latest/user-guide/install/.html). For example, to [install Anaconda on MacOSX](https://www.anaconda.com/products/individual), Double-click the Anaconda3-2021.11-MacOSX-x86_64.pkg file.
 
 2. Run the following command to create an environemnt from [Conda YAML file](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTunerENV.yaml)
 
@@ -58,15 +58,14 @@ conda env create --file TreeTunerENV.yaml
 ```
 
 #### 2.2 Dependencies, package/script versions and directory paths
-For example, Linux environment (e.g., Ubuntu 20.04 LTS) to run their BLAST searches (Altschul et al., 1997); MAFFT v7(Katoh and Standley, 2013), BMGE v1.12 (Criscuolo and Gribaldo, 2010), trimAl v1.4 (Capella-Gutiérrez et al., 2009), FastTree v2.1 (Price et al., 2010) and IQ-TREE v1.6.12 (Nguyen et al., 2015)
+For example, BLAST searches(e.g., ncbi-blast-2.12.0) (Altschul et al., 1997); MAFFT v7(Katoh and Standley, 2013), BMGE v1.12 (Criscuolo and Gribaldo, 2010), trimAl v1.4 (Capella-Gutiérrez et al., 2009), FastTree v2.1 (Price et al., 2010) and IQ-TREE v1.6.12 (Nguyen et al., 2015)
 
 `Step 1-9: Preparing the BLAST results`
 > cd /Your/Directory/Path/TreeTuner/Tutorial/TreeTuner_file_examples/Step1-9_preparing_input_files/
-1. [Linux environment (e.g., Ubuntu 20.04 LTS)](https://ubuntu.com/download/desktop)
-2. [BLAST searches (e.g., ncbi-blast-2.12.0)](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
-3. [NCBI-nr BLAST v5 database](https://ftp.ncbi.nlm.nih.gov/blast/db) 
-4. [Batch Entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez) 
-5. [SeqKit](https://bioinf.shenwei.me/seqkit/) 
+1. [BLAST searches (e.g., ncbi-blast-2.12.0)](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+2. [NCBI-nr BLAST v5 database](https://ftp.ncbi.nlm.nih.gov/blast/db) 
+3. [Batch Entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez) 
+4. [SeqKit](https://bioinf.shenwei.me/seqkit/) 
 
 `Step 10 & 17: Build a preliminary tree`
 > cd /Your/Directory/Path/TreeTuner/Tutorial/TreeTuner_file_examples/Step10_building_preliminary_tree/

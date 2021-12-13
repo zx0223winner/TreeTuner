@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/env/perl
 # TreeTuner v1.0
 # Script name: 
 # Version 1.0 (Dec 9th, 2021)

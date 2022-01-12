@@ -32,7 +32,7 @@ Usage: python3 color_fine_tuning_tree.py <newick_tree_file>
 ### 2. Computational Requirement
 TreeTuner users can either follow the Star Protocol pipeline to install the required packages or use the Conda environment file to deploy the pipeline. 
 
-#### 2.1 Create an environemnt from Conda YAML file
+#### 2.1 Create an environment from Conda YAML file
 
 To install all required dependencies, we provided a conda environment definition file (tested on the MacOSX system)[TreeTunerENV.yaml](https://github.com/zx0223winner/TreeTuner/blob/main/TreeTunerENV.yaml) with all the dependencies. The Perl, Ruby, Python, Shell scripts have been pre-storaged in the respective directory folders. 
 

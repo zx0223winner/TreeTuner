@@ -1,3 +1,9 @@
+
+<p align="center">
+  <img src="Treetuner.png" alt="Description" width="400" />
+</p>
+
+
 [![run with conda](http://img.shields.io/badge/run%20with-conda-3EB049?labelColor=000000&logo=anaconda)](https://docs.conda.io/en/latest/)
 [![License](https://img.shields.io/badge/licence-GPLv3-blue)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
@@ -260,3 +266,7 @@ Taxonomy-based dataset trimming might result in biased OTU retention because hig
 
 ### 7. Copyright
 Usage of this pipeline follows GPL-3.0 License. © Copyright (C) 2021. If you think this work is useful, please cite the related references above after using.
+
+
+### Declaration of generative AI and AI-assisted technologies 
+GitHub tool logo generation. Author reviewed and edited the content as needed and takes full responsibility for the content.
